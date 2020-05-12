@@ -1,7 +1,8 @@
-package com.example.guicodegeneration
+package com.example.guicodegeneration.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.guicodegeneration.R
 
 class MainActivity : AppCompatActivity() {
 
