@@ -6,9 +6,14 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
     defaultConfig {
         applicationId "com.example.guicodegeneration"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -34,4 +39,21 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //pytorch
+    implementation 'org.pytorch:pytorch_android:1.4.0'
+    implementation 'org.pytorch:pytorch_android_torchvision:1.4.0'
+
+    // Koin dependency injection
+    implementation 'org.koin:koin-android:2.1.5'
+    implementation 'org.koin:koin-android-viewmodel:2.1.5'
+
+    // ViewPager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    //Material design library
+    implementation 'com.google.android.material:material:1.1.0'
+
+    //Recycler view
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
 }
