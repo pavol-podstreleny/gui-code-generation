@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Gui code generation</string>
+    <string name="bt_load_image">Load image</string>
+    <string name="custom_image_tv">Select custom image</string>
+    <string name="test_image_tv">Select test set image</string>
+    <string name="generating_layout_tv">Generating layout</string>
 </resources>

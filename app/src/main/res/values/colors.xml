@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorGradientStart">#cc2b5e</color>
+    <color name="colorGradientEnd">#753a88</color>
+
+    <color name="buttonGreen">#68a62b</color>
 </resources>

@@ -1,11 +1,29 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="LoadCustomButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/buttonGreen</item>
+        <item name="drawableLeftCompat">@drawable/ic_image</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextHeading">
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextParagraph" parent="TextHeading">
+        <item name="android:textSize">18sp</item>
     </style>
 
 </resources>
