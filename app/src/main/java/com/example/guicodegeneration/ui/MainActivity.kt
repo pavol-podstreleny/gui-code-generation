@@ -1,6 +1,7 @@
 package com.example.guicodegeneration.ui
 
 import android.graphics.Bitmap
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -39,9 +40,15 @@ class MainActivity : AppCompatActivity(), OnTestImageClicked {
             viewAdapter.setTestImages(it)
         })
 
+        viewModel.predictedTokens.observe(this, Observer {
+            for (value in it) {
+                Toast.makeText(this.application, value.toString(), Toast.LENGTH_LONG).show()
+            }
+        })
+
     }
 
     override fun onClick(bitmap: Bitmap, fileName: String) {
-        Toast.makeText(this, "Clicked", Toast.LENGTH_LONG).show()
+        viewModel.predictTokens(bitmap, Uri.parse(fileName))
     }
 }
