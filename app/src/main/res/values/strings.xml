@@ -1,7 +1,23 @@
 <resources>
     <string name="app_name">Gui code generation</string>
-    <string name="bt_load_image">Load image</string>
+    <string name="button_load_image">Load image</string>
     <string name="custom_image_tv">Select custom image</string>
     <string name="test_image_tv">Select test set image</string>
     <string name="generating_layout_tv">Generating layout</string>
+
+
+    <string name="tab_generated_layout">Generated Layout</string>
+    <string name="tab_original_picture">\"Original Picture\"</string>
+
+    <string name="fragment_original_picture_title">Original picture</string>
+    <string name="fragment_generated_layout_title">Generated Layout</string>
+
+    <!-- Token relative strings -->
+    <string name="token_button">Button</string>
+    <string name="token_check">Check</string>
+    <string name="token_radio">Radio</string>
+    <string name="token_switcher">Switch</string>
+    <string name="token_label">Label</string>
+    <string name="token_empty">""</string>
+    <string name="error_token_generation">Problem with layout generation occurred!</string>
 </resources>

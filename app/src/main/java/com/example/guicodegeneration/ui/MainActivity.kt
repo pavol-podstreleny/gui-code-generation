@@ -1,15 +1,16 @@
 package com.example.guicodegeneration.ui
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.guicodegeneration.R
 import com.example.guicodegeneration.adapters.OnTestImageClicked
 import com.example.guicodegeneration.adapters.TestImageAdapter
+import com.example.guicodegeneration.ui.code_generation.CodeGenerationActivity
 import com.example.guicodegeneration.utils.hide
 import com.example.guicodegeneration.utils.show
 import com.example.guicodegeneration.viewmodel.NeuralNetworkViewModel
@@ -42,11 +43,16 @@ class MainActivity : AppCompatActivity(), OnTestImageClicked {
             viewAdapter.setTestImages(it)
         })
 
+        val tokenKey = "tokens"
+        val bitmapKey = "bitmap"
+
+        // Start another activity when model predicts tokens
         viewModel.predictedTokens.observe(this, Observer {
             contentDisplay(display = true)
-            for (value in it) {
-                Toast.makeText(this.application, value.toString(), Toast.LENGTH_LONG).show()
-            }
+            val intent = Intent(this@MainActivity, CodeGenerationActivity::class.java)
+            intent.putExtra(tokenKey, it)
+            intent.putExtra(bitmapKey, viewModel.bitmapUri)
+            startActivity(intent)
         })
 
     }

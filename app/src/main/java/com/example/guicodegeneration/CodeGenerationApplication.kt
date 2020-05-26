@@ -1,6 +1,7 @@
 package com.example.guicodegeneration
 
 import android.app.Application
+import com.example.guicodegeneration.di.codeGenerationModule
 import com.example.guicodegeneration.di.mainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -17,7 +18,8 @@ class CodeGenerationApplication : Application() {
 
             modules(
                 listOf(
-                    mainModule
+                    mainModule,
+                    codeGenerationModule
                 )
             )
         }

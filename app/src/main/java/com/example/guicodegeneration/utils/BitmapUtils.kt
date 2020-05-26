@@ -10,7 +10,7 @@ import java.io.FileOutputStream
 
 object BitmapUtils {
 
-    private val assetImagesFolder = "testimages"
+    private const val assetImagesFolder = "testimages"
 
 
     @WorkerThread
@@ -26,7 +26,7 @@ object BitmapUtils {
                 bitmapList.add(
                     BitmapBag(
                         loadBitmapFromAssets(assetManager, "${assetImagesFolder}/${file}"),
-                        file
+                        "${assetImagesFolder}/${file}"
                     )
                 )
             }
@@ -35,7 +35,7 @@ object BitmapUtils {
     }
 
 
-    private fun loadBitmapFromAssets(assetManager: AssetManager, nameOfAsset: String): Bitmap {
+    fun loadBitmapFromAssets(assetManager: AssetManager, nameOfAsset: String): Bitmap {
         return BitmapFactory.decodeStream(assetManager.open(nameOfAsset))
     }
 
