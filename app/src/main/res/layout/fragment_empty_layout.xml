@@ -10,7 +10,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/roboto_light"
+        android:gravity="center"
         android:text="@string/error_token_generation"
         android:textColor="@android:color/black"
         android:textSize="22sp"

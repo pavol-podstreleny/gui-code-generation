@@ -56,4 +56,7 @@ dependencies {
 
     //Recycler view
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+    //Cropping library
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
 }
