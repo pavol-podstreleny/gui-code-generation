@@ -1,8 +1,6 @@
 package com.example.guicodegeneration.adapters
 
 import android.graphics.Bitmap
-import android.os.Debug
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,14 +17,12 @@ class TestImageAdapter(
     RecyclerView.Adapter<TestImageAdapter.ImageViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-        Log.d("Rofl", "lol4")
         return ImageViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.test_image_item, parent, false)
         )
     }
 
     override fun getItemCount(): Int {
-        Log.d("Rofl", "lol3")
         if (testImages == null) {
             return 0
         }
@@ -34,7 +30,6 @@ class TestImageAdapter(
     }
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
-        Log.d("Rofl", "lol2")
         if (testImages != null) {
             val bitmap = testImages?.get(position)
             holder.bind(bitmap)
@@ -44,7 +39,6 @@ class TestImageAdapter(
     fun setTestImages(testImages: ArrayList<BitmapBag>?) {
         this.testImages = testImages
         notifyDataSetChanged()
-        Log.d("Rofl", "lol1")
     }
 
     inner class ImageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -63,7 +57,6 @@ class TestImageAdapter(
         }
 
         fun bind(bitmap: BitmapBag?) {
-            Log.d("Rofl", "lol")
             image.setImageBitmap(bitmap?.bitmap)
         }
     }

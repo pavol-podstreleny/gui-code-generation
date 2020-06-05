@@ -16,7 +16,6 @@ class Compiler(private val context: Context) {
     private val tokenOpenBrace = "{"
     private val tokenCloseBrace = "}"
 
-
     @UiThread
     fun compile(tokens: Array<String>): View? {
         var tokenView = TokenUtils.getViewFromToken(context, tokenBody)
@@ -111,7 +110,7 @@ class Compiler(private val context: Context) {
             (viewGroup.getChildAt(0) as ViewGroup).addView(
                 actualNode.tag
             )
-            return true;
+            return true
         }
         return false
 
