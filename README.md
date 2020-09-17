@@ -1,4 +1,2 @@
-# Graphical User Interface generation application
-Represents Android mobile application that transforms row graphical user interface input from designer into hierarchical structure of views that is rendered on the screen.
-Application uses PyTorch Android API and runs TorchScript serialized custom attention model trained on pix2code dataset.
-
+# Graphical User Interface generation 
+Android mobile application that transforms row graphical user interfaces input image into a hierarchical structure of views that are rendered on the screen. The application uses a machine learning model to predict individual views / view-groups at runtime. ML model was trained on the [pix2code](https://github.com/tonybeltramelli/pix2code) dataset and currently is not available.
