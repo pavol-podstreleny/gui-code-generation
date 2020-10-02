@@ -14,7 +14,7 @@ Following libraries were used to develop the application:
 git clone https://github.com/pavol-podstreleny/gui-code-generation.git
 ```
 
-#### 2) Install android studio
+#### 2) Install Android Studio
 The easiest way to run the app is to download and install [Android Studio IDE](https://developer.android.com/studio). Android Studio comes with everything you need to run the app (Android SDK, OpenJDK, Gradle, Emulator).
 
 #### 3) Import `gui-code-generation` project in Android Studio
