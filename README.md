@@ -3,6 +3,11 @@ Android mobile application that transforms row graphical user interfaces input i
 - Application uses a machine learning model to predict individual views / view-groups at runtime. 
 - ML model was trained on the [pix2code](https://github.com/tonybeltramelli/pix2code) dataset and currently is not available.
 
+Following libraries were used to develop the application:
+- [Koin](https://github.com/InsertKoinIO/koin) (DI framework)
+- [Jetpack](https://developer.android.com/jetpack) libraries
+- [PyTorch Mobile](https://pytorch.org/mobile/android/) (ml model)
+
 ## Run the application
 #### 1) The first step is to clone the repository
 ```cmd
